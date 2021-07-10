@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Opinie i oceny</title>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+          text-align: left;
+        }
+        </style>
+    
+    <table style="width:100%">
+        <tr>
+            <th>gra</th>
+            <th>użytkownik</th>
+            <th>ocena</th>
+            <th>opinia</th>
+          </tr>
+        
+            <% MyData.forEach(function(data){ %>
+            <tr>
+                <th> <%= data.game_name %></th> 
+                <th> <%= data.user_name %> </th> 
+                <th><%= data.rating %></th>
+                <th><%= data.opinion %></th>
+            </tr>
+            <% }) %>
+        
+      </table>
+      <a href="/">Strona Główna</a>
+</body>
+</html>

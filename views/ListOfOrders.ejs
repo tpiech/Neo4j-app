@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kupione Gry</title>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+<h1> Bought Games </h1>
+
+
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+      text-align: left;
+    }
+    </style>
+
+<table style="width:100%">
+    <tr>
+        <th>użytkownik</th>
+        <th>kupiona gra</th>
+        <th>ocena</th>
+        <th>opinia</th>
+      </tr>
+    
+        <% MyData.forEach(function(data){ %>
+        <tr>
+            <th> <%= data.username %></th> 
+            <th> <%= data.gamename %> </th> 
+            <th><%= data.rating %></th>
+            <th><%= data.opinion %></th>
+        </tr>
+        <% }) %>
+    
+  </table>
+  <a href="/">Strona Główna</a>
+</body>
+</html>
+

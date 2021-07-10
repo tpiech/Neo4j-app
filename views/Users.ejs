@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dane użytkowników</title>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+<h1> User DATA </h1>
+
+
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+      text-align: left;
+    }
+    </style>
+
+
+<table style="width:100%">
+    <tr>
+        <th>użytkownik</th>
+        <th>hasło</th>
+      </tr>
+    
+        <% MyData.forEach(function(data){ %>
+        <tr>
+            <th> <%= data.name %></th> 
+            <th> <%= data.password %> </th> 
+            <th> <%= data.email %> </th> 
+        </tr>
+        <% }) %>
+    
+  </table>
+
+  <a href="/">Strona Główna</a>
+</body>
+</html>
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Strona Główna</title>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+<h1> Main Page </h1>
+<h4> logged: <%= logged_user %> </h4>
+<br>
+<form action = "/" type = "get">
+<button type="submit" formaction = "/GetAllGames" class="mbtn">Lista Gier</button>  
+<button type="submit" formaction = "/GetAllDependencies" class="mbtn">Wszystkie oceny</button>
+<button type="submit" formaction = "/getOpinionsPage" class="mbtn">Oceny gier</button>
+<br>
+<button type="submit" formaction = "/AddNewGame" class="mbtn">Dodaj grę</button>
+<button type="submit" formaction = "/AddNewOrder" class="mbtn">Dodaj ocenę</button>
+<button type="submit" formaction = "/GetDependency" class="mbtn">Moje oceny</button>
+<button type="submit" formaction = "/specUser" class="mbtn">Wyszukaj użytkownika</button>
+
+<br>
+<button type="submit" formaction = "/log_out" class="mbtn">Wyloguj sie</button>
+</form>
+</body>
+</html>

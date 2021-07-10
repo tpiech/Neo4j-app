@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kupione Gry</title>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+<h1> Add Order</h1>
+
+
+<form action = "/AddDependency" method = "POST" >
+    <label>Użutkownik</label>
+    <label> <%= logged_user %> </label>
+    <br>
+    <label>Gra</label>
+    <select name = "game_name">
+        <% MyData.forEach(function(data){ %>
+            <option value="<%= data.name %>"><%= data.name %></option>
+        <% }) %>
+    </select>
+    <br>
+    <label>ocena</label>
+    <select name = "rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+    </select>
+    <br>
+    <label>Opinia</label>
+    <input type = "text" name="opinion">
+    <br>
+    <input type = "submit" name = "submit">
+</form>
+  <a href="/">Strona Główna</a>
+</body>
+</html>
+
